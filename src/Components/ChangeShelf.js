@@ -4,12 +4,10 @@ import React, { Component } from 'react'
 class ChangeShelf extends Component {
     state= {}
 
-
-
     render() {
         return (
             <div className="book-shelf-changer">
-                <select value={this.props.value} onChange={(e)=>this.props.changeShelf(this.props.book, e.target.value)}>
+                <select value={this.props.currentShelf} onChange={(e)=>this.props.changeShelf(this.props.book, e.target.value)}>
                     <option value="move" disabled>Move to...</option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want to Read</option>

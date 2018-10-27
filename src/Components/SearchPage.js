@@ -4,7 +4,13 @@ import {Link} from 'react-router-dom'
 //import './App.css'
 
 class SearchPage extends Component {
-    state = {}
+    state = {query: ''}
+
+    updateQuery = (query) => {
+        this.setState({
+            query:query
+        })
+    }
 
     render () {
         return (
@@ -12,7 +18,8 @@ class SearchPage extends Component {
                 <div className="search-books-bar">
                     <Link to='/' className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</Link>
                     <div className="search-books-input-wrapper">
-                        <input type="text" placeholder="Search by title or author"/>
+                        <input type="text" placeholder="Search by title or author" 
+                        value={this.state.query} onChange={(e) => this.updateQuery(e.target.value)}/>
                     </div>
                 </div>
                 <div className="search-books-results">

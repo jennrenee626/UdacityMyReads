@@ -19,9 +19,9 @@ class MainPage extends Component {
                     </div>
 
                     <div className="list-books-content">
-                        <BookShelf shelf='Want To Read' books={this.props.books.filter(book => book.shelf === 'wantToRead')} key={BookShelf.shelf}  changeShelf={this.props.changeShelf}/>
-                        <BookShelf shelf='Currently Reading' books={this.props.books.filter(book => book.shelf === 'currentlyReading')} key={BookShelf.shelf} changeShelf={this.props.changeShelf}/>
-                        <BookShelf shelf='Read' books={this.props.books.filter(book => book.shelf === 'read')} key={BookShelf.shelf} changeShelf={this.props.changeShelf}/>        
+                        <BookShelf shelf='Want To Read' books={this.props.books.filter(book => book.shelf === 'wantToRead')} key={BookShelf.shelf}  changeShelf={this.props.changeShelf} currentShelf='wantToRead'/>
+                        <BookShelf shelf='Currently Reading' books={this.props.books.filter(book => book.shelf === 'currentlyReading')} key={BookShelf.shelf} changeShelf={this.props.changeShelf} currentShelf='currentlyReading'/>
+                        <BookShelf shelf='Read' books={this.props.books.filter(book => book.shelf === 'read')} key={BookShelf.shelf} changeShelf={this.props.changeShelf} currentShelf='read'/>
                     </div>
                 </div>
 

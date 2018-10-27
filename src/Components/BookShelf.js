@@ -13,7 +13,7 @@ class BookShelf extends Component {
                     <ol className="books-grid">
                         {this.props.books.map(book => (
                             <li key={book.id}>
-                                <Book book={book} changeShelf={this.props.changeShelf}/> 
+                                <Book book={book} changeShelf={this.props.changeShelf} currentShelf={this.props.currentShelf}/> 
                             </li>
                         ))}
                     </ol>
@@ -24,10 +24,3 @@ class BookShelf extends Component {
 }
 
 export default BookShelf
-
-{/* <ol className="books-grid">
-                        {this.props.books.filter((book) => book.shelf === book.shelf) //resource credit - walkthrough by Maeva NAP
-                        .map(book => (
-                            <li key={book.id}>
-                                <Book book={book} changeShelf={this.props.changeShelf}/> 
-                            </li> */}
