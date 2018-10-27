@@ -15,7 +15,7 @@ class SearchPage extends Component {
     }
 
     getSearchedBooks = (query) => { 
-        //error resource Walkthrough by Maeva
+        //error resource: Walkthrough by Maeva
         if(query) { 
           BooksAPI.search(query).then((searchedBooks) => {
                 if(searchedBooks.error){
@@ -45,7 +45,7 @@ class SearchPage extends Component {
                 <div className="search-books-results">
                 <ol className="books-grid">
                     {this.state.searchedBooks.map(searchedBooks => {
-                        let shelf="none"; //shelf default and map resource Walkthrough by Maeva
+                        let shelf="none"; //shelf default and map resource: Walkthrough by Maeva
                         this.props.books.map(book => ( book.id === searchedBooks.id ? shelf=book.shelf : ''))
                         return (
                             <li key={searchedBooks.id}>
