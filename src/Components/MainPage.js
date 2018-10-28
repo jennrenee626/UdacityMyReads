@@ -3,8 +3,6 @@ import BookShelf from './BookShelf'
 import {Link} from 'react-router-dom'
 
 class MainPage extends Component {
-    state= {}
-
      render() {
         return (
             <div>
